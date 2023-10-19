@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyword search map in kakaoMap</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" type="text/css" href="./common.css" />
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="map" class="map_wrap" style="width:100%; height:100vh;"></div>
+        <div id="menu_guide" class="bg-white">
+            <div class="wrap">
+                <div class="menu_option">
+                    <form onsubmit="searchPlaces(); return false;">
+                        <input type="text" placeholder="지역 + 음식카테고리를 입력해주세요." id="keyword" size="20">
+                    </form>
+                </div>
+                <ul id="placesList"></ul>
+                <div id="pagination"></div>
+            </div>
+        </div>  
+    </div>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a040d0a27862385b136aaf1103e66fbf&libraries=services,clusterer,drawing">
+    </script>
+    <script type="text/javascript" src="./searchMap.js"></script>
+</body>
+
+</html>
